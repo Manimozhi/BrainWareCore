@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "BrainWare2019\Web.csproj", "{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestBrainwareCore", "UnitTestBrainware2019\UnitTestBrainwareCore.csproj", "{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAA53D8E-2BFB-42EF-8586-278019BBDB55}
+	EndGlobalSection
+EndGlobal

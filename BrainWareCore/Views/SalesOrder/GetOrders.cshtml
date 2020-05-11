@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Web.Models.SalesOrder>
+
+@{
+    ViewData["Title"] = "This is the BrainWare Sales Orders page! Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h1>List of all Sales Orders</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SalesOrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalesOrderTotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesOrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesOrderTotal)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
