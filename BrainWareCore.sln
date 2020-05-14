@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "BrainWareCore\Web.csproj", "{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "BrainWareCore\Web.csproj", "{AD888DB1-16CE-4CA9-A787-7C091AF5E3D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestBrainwareCore", "UnitTestBrainwareCore\UnitTestBrainwareCore.csproj", "{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestBrainwareCore", "UnitTestBrainwareCore\UnitTestBrainwareCore.csproj", "{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDB", "ProjectDB\ProjectDB.sqlproj", "{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{641ED39F-5CFF-4FFF-A9D0-1F96A3710F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4E2E14-D7DA-40F3-8E5A-253FE690BD58}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

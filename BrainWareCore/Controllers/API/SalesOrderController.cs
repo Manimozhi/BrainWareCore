@@ -33,6 +33,14 @@ namespace Web.Controllers.API
             return View(data.GetAllSalesOrder());
         }
 
+        [HttpPost]
+        public IActionResult GetOrdersByPage(int pageSize = 10, int pageNumber = 1)
+        {
+            var data = new SalesOrderService(_connectionString);
+                        
+            return View(data.GetAllSalesOrder(pageSize,pageNumber));
+        }
+
         // GET api/<controller>/5
         [HttpGet("{id}")]
         public IActionResult GetOrderById(string id)
@@ -44,7 +52,7 @@ namespace Web.Controllers.API
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Create([FromBody]string value)
         {
         }
 

@@ -7,26 +7,35 @@ using Web.Controllers.API;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using BrainWare2019;
+using Web.Infrastructure;
+using System;
 
 namespace UnitTestBrainware2019
 {
     [TestClass]
     public class UnitTestController
     {
-        private  string _connectionString;
-       // [SetUp]
+        private  string ConnectionString;
+        // requires using Microsoft.Extensions.Configuration;
+        private readonly IConfiguration Configuration;
+        private readonly ILogger<HomeController> _logger;
+        public UnitTestController()
+        {
+           // Configuration = configuration;
+        }
+        // [SetUp]
         public void SetUp()
         {
-
-            _connectionString = "Server=.;Database=BrainWare;Trusted_Connection=True;";           
+           // ConnectionString = Configuration["BrainWareConnectionString"];
             
+            ConnectionString = "Server=.;Database=BrainWare;Trusted_Connection=True;";           
         }
         //[TearDown]
         public void TearDown()
         {
         }
         
-        private readonly ILogger<HomeController> _logger;
+       
         [TestMethod]
         public void Index()
         {
@@ -45,17 +54,38 @@ namespace UnitTestBrainware2019
         public void Test()
         {
             SetUp();
-            SalesOrderController orderController = new SalesOrderController(_connectionString);
+            SalesOrderController orderController = new SalesOrderController(Configuration);
 
-            var result = orderController.Get();
+            var result = orderController.GetOrders();
             Assert.IsNotNull(result);
 
+            Assert.IsNotNull(result);
+            Assert.IsTrue(true);
+        }
 
-
-            string id = "2D6EB4F1-2C4C-463E-A810-0063EE466B4A";
-           // result = orderController.GetOrdersById(id) ;
+        [TestMethod]
+        public void GetAllSalesOrdersTest()
+        {
+            SetUp();
+            var dataBase = new Database(ConnectionString);
+            var result = dataBase.GetAllSalesOrders();
+             
+            Assert.IsNotNull(result);
 
             Assert.IsNotNull(result);
+            Assert.IsTrue(true);
+        }
+        [TestMethod]
+        public void GetAllSalesOrdersPagedTest()
+        {
+            SetUp();
+            var dataBase = new Database(ConnectionString);
+            var result = dataBase.GetAllSalesOrders(10,1);
+
+            Assert.IsNotNull(result);
+
+            Assert.AreEqual(5,result[0].SalesOrderDetails.Count);
+            Assert.AreEqual("Home Insurance",result[0].CompanyName.Trim());
             Assert.IsTrue(true);
         }
     }

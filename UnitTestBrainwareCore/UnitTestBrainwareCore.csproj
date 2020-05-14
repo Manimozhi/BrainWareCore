@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BrainWare2019\Web.csproj" />
+    <ProjectReference Include="..\BrainWareCore\Web.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,10 @@
 ﻿@model IEnumerable<Web.Models.SalesOrder>
 
 @{
-    ViewData["Title"] = "This is the BrainWare Sales Orders page! Welcome";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "View";
 }
 
-    <h1>List of all Sales Orders</h1>
+<h1>View</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -43,7 +42,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SalesOrderTotal)
             </td>
-            
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
         </tr>
 }
     </tbody>
