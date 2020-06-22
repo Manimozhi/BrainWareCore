@@ -26,9 +26,9 @@ namespace UnitTestBrainware2019
         // [SetUp]
         public void SetUp()
         {
-           // ConnectionString = Configuration["BrainWareConnectionString"];
+           // ConnectionString = Configuration["RetailConnectionString"];
             
-            ConnectionString = "Server=.;Database=BrainWare;Trusted_Connection=True;";           
+            ConnectionString = "Server=tcp:cephalin-core.database.windows.net,1433;Database=retailDB;User ID=mdoraisamy;Password=Muthaluser9874;Encrypt=true;Connection Timeout=30;";           
         }
         //[TearDown]
         public void TearDown()

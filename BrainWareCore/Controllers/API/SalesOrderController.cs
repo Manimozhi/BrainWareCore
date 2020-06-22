@@ -18,7 +18,7 @@ namespace Web.Controllers.API
         private readonly string _connectionString;
         public SalesOrderController(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("BrainWareConnectionString");
+            _connectionString = configuration.GetConnectionString("RetailConnectionString");
          }
         //public SalesOrderController(string connectionString)
         //{
