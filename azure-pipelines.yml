@@ -32,3 +32,13 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    
+- task: SqlAzureDacpacDeployment@3
+  displayName: Execute Azure SQL : DacpacTask
+  inputs:
+    azureSubscription: 'dc6b503d-c404-4b70-a656-1b5d35a2591d'
+    ServerName: 'Mozhichchuvadi'
+    DatabaseName: 'RetailExchange'
+    SqlUsername: 'mdoraisamy'
+    SqlPassword: 'MuthalUser9874'
+    DacpacFile: '$(Build.SourcesDirectory)\ProjectDB.dacpac'
