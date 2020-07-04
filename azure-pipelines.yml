@@ -37,8 +37,8 @@ steps:
   displayName: Execute Azure SQL : DacpacTask
   inputs:
     azureSubscription: 'dc6b503d-c404-4b70-a656-1b5d35a2591d'
-    ServerName: 'Mozhichchuvadi'
-    DatabaseName: 'RetailExchange'
+    ServerName: 'retailexchange'
+    DatabaseName: 'retailDB'
     SqlUsername: 'mdoraisamy'
     SqlPassword: 'MuthalUser9874'
     DacpacFile: '$(Build.SourcesDirectory)\ProjectDB.dacpac'
